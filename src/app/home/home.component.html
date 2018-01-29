@@ -1,0 +1,9 @@
+<ul [@locations]="locations.length">
+  <li *ngFor="let location of locations">
+    <div class="params">
+        <div class="temperature">Temperature: {{ location.main.temp }}</div>
+        <div class="humidity">Humidity: {{ location.main.humidity }}</div>
+    </div>
+    <div class="name">{{ location.name }}</div>
+  </li>
+</ul>

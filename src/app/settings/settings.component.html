@@ -1,0 +1,17 @@
+<p>
+  Please choose gender option 
+</p>
+<ul>
+  <li>
+    <label>
+        <input type="radio" [(ngModel)]="gender" (change)="genderChanged($event)" value="Male">
+        Male
+    </label>
+  </li>
+  <li>
+    <label>
+      <input type="radio" [(ngModel)]="gender" (change)="genderChanged($event)" value="Female">
+      Female
+    </label>
+  </li>
+</ul>

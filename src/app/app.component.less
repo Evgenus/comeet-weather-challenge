@@ -1,0 +1,37 @@
+.content {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.nav {
+    list-style: none;
+    white-space: nowrap;
+    background: silver;
+    padding: 0px;
+    margin: 0px;
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: gray;
+
+    li {
+        font-size: 14pt;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        display: inline-block;
+        border-left: 1px solid gray;
+
+        &:first-child {
+            border-left: none;
+        }
+
+        &:last-child {
+            border-right: 1px solid gray;
+        }
+
+        a, .statusText{ 
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+    }
+}
