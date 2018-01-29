@@ -17,7 +17,6 @@ export class LoaderService {
   private _gender = new BehaviorSubject<string>("Male");
   gender = this._gender.asObservable();;
 
-  api_url = "//api.openweathermap.org/data/2.5/box/city";
   zoom = 24;
   lon_step = 360 / 1;
   lat_step = 180 / 1;
@@ -35,7 +34,7 @@ export class LoaderService {
     params.set('bbox', bbox);
     params.set('appid', environment.open_weather_token);
     this._jobs.add(bbox);
-    this.http.get(this.api_url, {params}).toPromise().then(
+    this.http.get(environment.api_url, {params}).toPromise().then(
       res => this.processResult(bbox, res.json())
     ).catch(
       error => console.log(error)
