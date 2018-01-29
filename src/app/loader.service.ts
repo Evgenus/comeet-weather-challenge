@@ -4,8 +4,6 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { sortBy } from 'underscore';
 
 import { environment } from '../environments/environment';
-import { setTimeout } from 'timers';
-
 
 @Injectable()
 export class LoaderService {
@@ -74,7 +72,7 @@ export class LoaderService {
         }
       }
     } else {
-      setTimeout(
+      self.setTimeout(
         () => this.processResult(null, environment.result),
         3000
       );
