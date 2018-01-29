@@ -17,7 +17,7 @@ export class LoaderService {
   private _gender = new BehaviorSubject<string>("Male");
   gender = this._gender.asObservable();;
 
-  api_url = "http://api.openweathermap.org/data/2.5/box/city";
+  api_url = "https://api.openweathermap.org/data/2.5/box/city";
   zoom = 24;
   lon_step = 360 / 1;
   lat_step = 180 / 1;
